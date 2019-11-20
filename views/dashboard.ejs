@@ -1,3 +1,27 @@
 <h1 class="mt-4">Dashboard</h1>
 <p class="lead mb-3">Welcome <%= name %></p>
 <a href="/users/logout" class="btn btn-secondary">Logout</a>
+
+<!-- ! Beginning blog work -->
+<div class="card">
+    <form>
+        <div class="form-group">
+            <label for="title-input">Title</label>
+            <input type="text" class="form-control" id="title-input">
+            <div class="form-group">
+                <label for="category-input">Category</label>
+                <select class="form-control" id="category-input">
+                    <option>Cat 1</option>
+                    <option>Cat 2</option>
+                    <option>Cat 3</option>
+                    <option>Cat 4</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="blog-content-input">Blog Content</label>
+                <textarea class="form-control" id="blog-content-input" rows="8"></textarea>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
