@@ -4,13 +4,15 @@
 
 <!-- ! Beginning blog work -->
 <div class="card">
-    <form>
+    <form action='/blogs/dashboard' method='POST'>
         <div class="form-group">
-            <label for="title-input">Title</label>
-            <input type="text" class="form-control" id="title-input">
+            <label for="title">Title</label>
+            <input type="title" class="form-control" id="title" name="title"
+                value="<%= typeof title != 'undefined' ? title : '' %>" />
             <div class="form-group">
-                <label for="category-input">Category</label>
-                <select class="form-control" id="category-input">
+                <label for="category">Category</label>
+                <select class="form-control" type='category' id="category" name="category"
+                    value="<%= typeof category != 'undefined' ? category : '' %>">
                     <option>Cat 1</option>
                     <option>Cat 2</option>
                     <option>Cat 3</option>
@@ -18,8 +20,9 @@
                 </select>
             </div>
             <div class="form-group">
-                <label for="blog-content-input">Blog Content</label>
-                <textarea class="form-control" id="blog-content-input" rows="8"></textarea>
+                <label for="content">Blog Content</label>
+                <textarea class="form-control" type='content' id="content" rows="8" name="content"
+                    value="<%= typeof content != 'undefined' ? content : '' %>"></textarea>
             </div>
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
