@@ -24,5 +24,15 @@ router.post('/dashboard', (req, res) => {
 
 })
 // !end of attempt to make post route
+//! beginning of trying to get blogs from db onto page
+//! This is all fucked up
+router.get('allBlogs', (req, res) => {
+    Blog.find({}, (err, blogs) => {
+        res.json(blogs)
+    })
+})
+
+
+//! ending of trying to get blogs from db onto page
 
 module.exports = router;
