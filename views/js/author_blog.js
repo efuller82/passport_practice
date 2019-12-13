@@ -1,3 +1,9 @@
 $(document).ready(function() {
-    $.ajax({ url: "/blogs/all")}
+    $.ajax({
+        dataType: 'json',
+        url: '/blogs/all',
+        data: data,
+        success: console.log('success');
+    })
+    console.log('page works');
 })
